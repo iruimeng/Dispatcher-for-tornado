@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ static_url('css/style.css') }}" type="text/css" />
+</head>
+<body>
+     <div class="container">
+        <h3>Dispatcher For Tornado测试demo</h3>
+        <ul class="nav nav-pills">
+            <li {% if data['uri'] == 1 %}class="active"{% end %}>
+                <a href="/">Default</a>
+            </li>
+            <li {% if data['uri'] == 2 %}class="active"{% end %}><a href="/test/action2">helloword</a></li>
+        </ul>
+        <div class="row-fluid"></div>
+            {% module Template(data['__tpl_path'], **data) %}
+        </div>
+    </div>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.js"></script>
+</body>
+</html>
