@@ -1,17 +1,23 @@
 Dispatcher for tornado
+======================
 
-Îªtornado¿ò¼Ü¿ª·¢µÄurl·Ö·¢Æ÷£¬´úÂë¿ª·¢ÓĞ¸öÔ­ÔòÊÇÔ¼¶¨ÓÅÓÚÅäÖÃ£¬¿ò¼ÜÂ·ÓÉÄ¬ÈÏÊÇÓÃlist£¬Èçhandlers = [(r"/post_path", PostHandler), (r"/del", DeleteHandler), (r"/home",HomeHandler)]À´ÅäÖÃÂ·ÓÉ¹æÔò£¬¶ø´ËÔÚ·ÃÎÊhttp://localhst:8081/{controller}/{action} µÄurlÊ±ºò£¬Êµ¼Êµ÷ÓÃ/appliaction/ÏÂÃæ¶ÔÓ¦Ãû×ÖµÄcontroller¡£¼´£º/application/controller/{controller}Controller.py
-Ä£°åÒ²ÊÇÔ¼¶¨ºÍcontrollerÃû×ÖÏàÍ¬£¬ÔÚapplication/viewÏÂÃæ¡£
-Èç¹ûÊµ¼ÊÖĞÄ£°åÔ¼¶¨²»Í¬£¬ÔÚÊµ¼ÊµÄ¿ØÖÆÆ÷ÀïÃæ·µ»Ø{'__tpl_file': 'name'}¼´¿É¡£
+ä¸ºtornadoæ¡†æ¶å¼€å‘çš„urlåˆ†å‘å™¨ï¼Œæ¡†æ¶è·¯ç”±é»˜è®¤æ˜¯ç”¨listï¼Œå¦‚handlers = [(r"/post_path", PostHandler), (r"/del", DeleteHandler), (r"/home",HomeHandler)]æ¥é…ç½®è·¯ç”±è§„åˆ™ï¼Œè€Œæ­¤åœ¨è®¿é—®http://localhst:8081/{controller}/{action} çš„urlæ—¶å€™ï¼Œå®é™…åŠ è½½ç›®å½•/appliaction/ä¸‹é¢å¯¹åº”åå­—çš„æ§åˆ¶å™¨ã€‚å³ï¼š/application/controller/{controller}Controller.pyï¼Œç„¶åæ‰§è¡Œé‡Œé¢çš„{action}æ–¹æ³•ï¼Œç„¶åå‡½æ•°è¿”å›dataï¼Œæ¸²æŸ“æ¨¡æ¿ã€‚
 
-ÏîÄ¿ÔÚtornado4.0²âÊÔÍ¨¹ı¡£
+####å‘½åé¢„å®š
+* 1ï¼Œæ§åˆ¶å™¨ä¸º name+Controller.py
+* 2ï¼Œæ¨¡æ¿çº¦å®šå’Œæ§åˆ¶å™¨åå­—ç›¸åŒï¼Œåœ¨application/viewä¸‹é¢ï¼Œä¸º{controller}/{action}.htm å¦‚æœå®é™…ä¸­æ¨¡æ¿çº¦å®šä¸åŒï¼Œåœ¨å®é™…çš„æ§åˆ¶å™¨é‡Œé¢è¿”å›{'__tpl_file': 'name'}å³å¯ã€‚
 
-Àı×Ó£º
-1,Æô¶¯web server
-    python main.py
+é¡¹ç›®åœ¨tornado4.0æµ‹è¯•é€šè¿‡ã€‚
 
-2,²âÊÔ
-    curl http://127.0.0.1:8081/test/action1
-
+####æµ‹è¯•ä½¿ç”¨
+* 1ï¼Œå¯åŠ¨web server
+```Bash
+python main.py
+```
+* 2ï¼Œæµ‹è¯•
+```Bash
+curl http://127.0.0.1:8081/test/action1
+curl http://127.0.0.1:8081/test/action2
+```
 
 
